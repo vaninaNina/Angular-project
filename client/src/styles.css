@@ -1,0 +1,198 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Young Serif';
+}
+
+body{
+    min-width: 100vh;
+}
+
+.section-top-bar .container {
+    display: flex;
+    border: 0.2em solid black;
+    background-color: black;
+    padding: 0.8em;
+    justify-content: space-around;
+}
+
+.section-header .container{
+    aspect-ratio:16/6;
+    background-image: url(https://i.pinimg.com/originals/0d/96/8d/0d968d5cbb4ee9a4f80eab9610c02364.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.section-banner .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f2e2d8;
+    padding: 4.6em;
+}
+
+.section-info .container {
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 7em;
+    text-align: center;
+    
+}
+
+.section-content .container {
+    display: flex;
+    flex-direction: row;
+    background-color: #f2e2d8;
+    border-radius: 2em;
+    margin: auto 8em;
+    padding: 3em;
+    flex-wrap: wrap;
+
+}
+
+.section-form .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2em;
+    padding: 4em;
+    background-color: #f2e2d8;
+    color: #f2e2d8;
+    border-radius: 2em;
+    min-width: 500px;
+}
+
+.section-footer .container {
+    display: flex;
+    flex-grow: 100%;
+    background-color: black;
+    margin-top:2em;
+    height: 2em;
+    color: white;
+    
+}
+
+img {
+    width: 260px;
+    height: 260px;
+    border: 0.1em solid #f2e2d8;
+    border-radius: 0.2em;
+    margin-right: 2em;
+}
+
+.section-top-bar .container .nav{
+    display: flex;
+    flex-direction: row;
+    font-size: medium;
+    gap: 2.8em;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-top-bar .container .button {
+    background-color: white;
+    color: rgb(96, 47, 15);
+    border:none;
+    padding: 10px 12px;
+    font-size: 16px;
+    align-items: center;
+    font-family: 'Young Serif';
+}
+
+.section-banner .container span {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 220px;
+    text-align: center;
+}
+
+.section-banner .container h3 {
+    display: flex;
+    font-size: 2em;
+    font-weight:normal;
+}
+
+.section-content .container .first{
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 100%;
+    
+}
+
+.section-content .container .second{
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 100%;
+    
+}
+
+.section-content .container .third{
+    display: flex;
+    flex-direction: row;
+    flex: 0 1 100%;
+  
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 60%;
+    gap: 1em;
+    justify-content: center;
+}
+
+.section-form .container span {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+   
+}
+
+.first-form h2 {
+   text-align: center;
+   padding-bottom: 1em;
+}
+
+.first-form .signup {
+    display: flex;
+    flex-direction: column;
+}
+
+.first-form .notification {
+    display: flex;
+    flex-direction: row;
+    gap: 0.3em
+}
+
+.notification  {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin: 3em;
+} 
+
+.borderedform {
+    border: 0.1em solid black;
+    background-color:black;
+}
+
+a {
+    color: white;
+    font-weight: lighter;
+    text-decoration: none;
+}
