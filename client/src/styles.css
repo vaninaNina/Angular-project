@@ -74,10 +74,15 @@ body{
 }
 
 .section-footer .container {
-    display: flex;
-    flex-grow: 100%;
+    /* display: flex;
+    flex-grow: 100%; */
     background-color: black;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
     margin-top:2em;
+    padding: 10px ;
+    text-align: center;
     height: 2em;
     color: white;
     
