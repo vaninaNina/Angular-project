@@ -1,24 +1,58 @@
 <div class="container">
   <div class="register-container">
     <h2>Register</h2>
-    <form>
+    <form [formGroup]="form" (ngSubmit)="register()">
       <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required />
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          placeholder="elena@abv.bg"
+          formControlName="email"
+        />
       </div>
-      <div class="form-group">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required />
-      </div>
-      <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-      </div>
-      <div class="form-group">
-        <label for="repassword">Re-enter Password:</label>
-        <input type="password" id="repassword" name="repassword" required />
-      </div>
-      <button type="submit">Register</button>
+      <ng-container *ngIf="form.get('email')?.touched">
+        <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+          Email is required!
+        </p>
+        <p class="error" *ngIf="form.get('email')?.errors?.['emailValidator']">
+          Email is not valid!
+        </p>
+      </ng-container>
+
+      <ng-container formGroupName="passGroup">
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="******"
+            formControlName="password"
+          />
+        </div>
+        <div class="form-group">
+          <label for="rePassword">Re-enter Password:</label>
+          <input
+            type="password"
+            id="rePassword"
+            name="reRassword"
+            placeholder="******"
+            formControlName="reRassword"
+          />
+        </div>
+        <ng-container *ngIf="passGroup?.get('rePassword')?.touched">
+          <p
+            class="error"
+            *ngIf="passGroup?.errors?.['matchPasswordsValidator'] || 
+            passGroup?.get('rePassword')?.errors?.['required']"
+          >
+            Repeat Password does not match password!
+          </p>
+        </ng-container>
+      </ng-container>
+      <button type="submit">Create Account</button>
     </form>
     <div class="login-container">
       <h3>You are already registered?</h3>
@@ -26,3 +60,6 @@
     </div>
   </div>
 </div>
+<!-- 
+[disabled]="form.invalid"
+        [style]="{ backgroundColor: form.invalid ? 'grey' : 'blue' }" -->

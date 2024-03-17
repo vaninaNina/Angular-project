@@ -7,10 +7,11 @@ import { HeaderComponent } from "./core/header/header.component";
 import { FooterComponent } from "./core/footer/footer.component";
 import { MainComponent } from "./core/main/main.component";
 import { UserModule } from "./user/user.module";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent, MainComponent],
-  imports: [BrowserModule, UserModule, AppRoutingModule],
+  imports: [BrowserModule, SharedModule, UserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
