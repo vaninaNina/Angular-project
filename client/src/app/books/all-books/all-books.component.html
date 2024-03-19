@@ -1,9 +1,16 @@
-<div>
-  <h2 class="title">Recent posts</h2>
-  <div>
-    <div *ngFor="let book of books">
-      <h3>{{ book.title }}</h3>
-      <p>{{ book.author }}</p>
+<body>
+  <div class="catalog">
+    <div class="book-card" *ngFor="let book of books">
+      <img src="{{ book.imageUrl }}" alt="Book 1" />
+      <div class="book-info">
+        <div class="details">
+          <h2>{{ book.title }}</h2>
+          <p>Author: {{ book.author }}</p>
+        </div>
+        <div class="button">
+          <a routerLink="#">More details</a>
+        </div>
+      </div>
     </div>
   </div>
-</div>
+</body>

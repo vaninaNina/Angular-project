@@ -1,0 +1,56 @@
+.catalog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 2em;
+}
+
+.book-card {
+  width: calc(30%);
+  margin: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #f2e2d8;
+}
+
+.book-card img {
+  width: 40%;
+  height: auto;
+  margin-left: 10px;
+}
+
+.book-info {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  justify-content: space-between;
+}
+
+.details {
+  height: 200px;
+}
+
+.button {
+  margin-bottom: 0.5em;
+}
+
+.button a {
+  color: black;
+  display: inline;
+  position: bottom;
+  border: 2px solid black;
+  border-radius: 3em;
+  width: 10em;
+  text-align: center;
+  font-size: 15px;
+  padding: 0.4em;
+}
+.button a:hover {
+  background-color: black;
+  color: white;
+}
