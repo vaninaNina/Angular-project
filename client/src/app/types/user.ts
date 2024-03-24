@@ -1,13 +1,10 @@
-export interface User {
+export interface UserForAuth {
   _id: string;
   email: string;
-  username: string;
   password: string;
-  rePass: string;
 }
 
 export interface Profile {
-  username: string;
   email: string;
   savedBooks: string[];
   posts: string[];
