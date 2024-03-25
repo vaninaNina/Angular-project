@@ -9,8 +9,6 @@ import { SharedModule } from "./shared/shared.module";
 import { HttpClientModule } from "@angular/common/http";
 import { BooksModule } from "./books/books.module";
 import { CoreModule } from "./core/core.module";
-import { HeaderComponent } from "./core/header/header.component";
-import { FooterComponent } from "./core/footer/footer.component";
 
 @NgModule({
   declarations: [AppComponent],

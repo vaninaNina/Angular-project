@@ -14,7 +14,7 @@ const routes: Routes = [
     loadChildren: () => import("./user/user.module").then((m) => m.UserModule),
   },
   { path: "books", component: AllBooksComponent },
-  { path: "books/details/:booksId", component: BookComponent },
+  { path: "books/:booksId", component: BookComponent },
   { path: "posts", component: AllPostsComponent },
 ];
 
