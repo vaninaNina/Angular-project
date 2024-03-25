@@ -13,4 +13,9 @@ export class ApiService {
     const api = "http://localhost:3030/data";
     return this.http.get<Book[]>(`${api}/books`);
   }
+
+  getBook(bookId: string) {
+    const api = "http://localhost:3030/data";
+    return this.http.get<Book>(`${api}/books/${bookId}`);
+  }
 }
