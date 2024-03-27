@@ -1,1 +1,12 @@
-<p>all-posts works!</p>
+<body>
+  <div class="catalog">
+    <div class="post" *ngFor="let post of posts">
+      <h2>{{ post.title }}</h2>
+      <p>Author: {{ post.author }}</p>
+      <p>Review: {{ post.text.slice(0, 180).concat("...") }}</p>
+      <button routerLink="/posts/{{ post._id }}" class="read-more">
+        Read More
+      </button>
+    </div>
+  </div>
+</body>
