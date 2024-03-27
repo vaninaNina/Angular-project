@@ -7,7 +7,7 @@
       <p>Genre: {{ book.genre }}</p>
       <p>Published: {{ book.published }}</p>
       <p>Details: {{ book.details }}</p>
-      <a href="#" class="save-button">Save</a>
+      <a *ngIf="isLoggedIn" class="save-button">Save</a>
     </div>
   </div>
 </div>
