@@ -22,7 +22,7 @@ export class BookComponent implements OnInit {
   }
   ngOnInit(): void {
     this.activeRoute.params.subscribe((data) => {
-      const id = data["booksId"];
+      const id = data["bookId"];
 
       this.apiService.getBook(id).subscribe((book) => {
         this.book = book;
