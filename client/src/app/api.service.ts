@@ -1,6 +1,7 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Book } from "./types/book";
+import { Post } from "./types/post";
 
 @Injectable({
   providedIn: "root",
@@ -10,12 +11,18 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   getBooks() {
-    const api = "http://localhost:3030/data";
-    return this.http.get<Book[]>(`${api}/books`);
+    return this.http.get<Book[]>(`${this.api}/books`);
   }
 
   getBook(bookId: string) {
-    const api = "http://localhost:3030/data";
-    return this.http.get<Book>(`${api}/books/${bookId}`);
+    return this.http.get<Book>(`${this.api}/books/${bookId}`);
+  }
+
+  getPosts() {
+    return this.http.get<Post[]>(`${this.api}/reviews`);
+  }
+
+  getPost(postId: string) {
+    return this.http.get<Post>(`${this.api}/reviews/${postId}`);
   }
 }
