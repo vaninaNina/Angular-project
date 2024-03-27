@@ -1,9 +1,7 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
 import { MainComponent } from "./core/main/main.component";
-import { AllBooksComponent } from "./books/all-books/all-books.component";
-import { BookComponent } from "./books/book/book.component";
-import { AllPostsComponent } from "./posts/all-posts/all-posts.component";
+import { ErrorComponent } from "./core/error/error.component";
 
 const routes: Routes = [
   { path: "", component: MainComponent },
@@ -21,6 +19,7 @@ const routes: Routes = [
     loadChildren: () =>
       import("./posts/posts.module").then((m) => m.PostsModule),
   },
+  { path: "**", component: ErrorComponent },
 ];
 
 @NgModule({

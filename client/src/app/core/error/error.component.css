@@ -1,0 +1,22 @@
+div {
+  margin: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  border: 0.2em solid black;
+  background-color: black;
+  border-radius: 4em;
+  width: 120px;
+  margin: 2em 0 0 0;
+  padding: 1em 0 1em 0;
+  position: center;
+  color: white;
+}
+
+button:hover {
+  background-color: #d7c8ad;
+  color: black;
+}
