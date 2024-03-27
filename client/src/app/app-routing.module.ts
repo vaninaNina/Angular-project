@@ -7,15 +7,20 @@ import { AllPostsComponent } from "./posts/all-posts/all-posts.component";
 
 const routes: Routes = [
   { path: "", component: MainComponent },
-  // { path: "register", component: RegisterComponent },
-  // { path: "login", component: LoginComponent },
   {
     path: "auth",
     loadChildren: () => import("./user/user.module").then((m) => m.UserModule),
   },
-  { path: "books", component: AllBooksComponent },
-  { path: "books/:booksId", component: BookComponent },
-  { path: "posts", component: AllPostsComponent },
+  {
+    path: "books",
+    loadChildren: () =>
+      import("./books/books.module").then((m) => m.BooksModule),
+  },
+  {
+    path: "posts",
+    loadChildren: () =>
+      import("./posts/posts.module").then((m) => m.PostsModule),
+  },
 ];
 
 @NgModule({
