@@ -1,1 +1,39 @@
-<p>profile works!</p>
+<header>
+  <h1>Welcome to Your Profile Page, {{ profile.username }}</h1>
+</header>
+<div class="container">
+  <section id="email">
+    <h2>Email</h2>
+    <p>Your email: {{ profile.email }}</p>
+  </section>
+
+  <section id="posts">
+    <h2>Posts</h2>
+    <div class="posts">
+      <div class="post">
+        <h3>Title of Post 1</h3>
+        <p>Description of Post 1</p>
+      </div>
+      <div class="post">
+        <h3>Title of Post 2</h3>
+        <p>Description of Post 2</p>
+      </div>
+      <!-- Add more posts as needed -->
+    </div>
+  </section>
+
+  <section id="saved-books">
+    <h2>Saved Books</h2>
+    <div class="saved-books">
+      <div class="book">
+        <h3>Title of Book 1</h3>
+        <p>Description of Book 1</p>
+      </div>
+      <div class="book">
+        <h3>Title of Book 2</h3>
+        <p>Description of Book 2</p>
+      </div>
+      <!-- Add more saved books as needed -->
+    </div>
+  </section>
+</div>
