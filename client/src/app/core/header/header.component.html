@@ -9,7 +9,9 @@
       <div *ngIf="isLoggedIn">
         <ul class="nav">
           <li><a routerLink="#">Create a Post</a></li>
-          <li><a routerLink="/profile">My profile</a></li>
+          <li>
+            <a routerLink="/profile">{{ username }}`s profile</a>
+          </li>
         </ul>
       </div>
     </ul>

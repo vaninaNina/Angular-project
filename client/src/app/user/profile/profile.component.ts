@@ -15,13 +15,11 @@ export class ProfileComponent implements OnInit {
     posts: [],
   };
   constructor(private userService: UserService) {}
-
-  ngOnInit(): void {
-    const { email, username } = this.userService.user!;
-    console.log(email, username);
-    // this.profile = {
-    //   username,
-    //   email,
-    // };
+  get username(): string {
+    return this.userService.user?.username || "";
   }
+  get email(): string {
+    return this.userService.user?.email || "";
+  }
+  ngOnInit(): void {}
 }
