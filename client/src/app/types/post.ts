@@ -1,8 +1,10 @@
-import { User } from "./user";
+import { UserForAuth } from "./user";
 export interface Post {
-  likes: string[];
   _id: string;
+  title: string;
   text: string;
-  userId: User;
+  imageUrl: string;
+  author: UserForAuth;
   comments: string[];
+  likes: string;
 }
