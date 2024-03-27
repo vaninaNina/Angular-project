@@ -6,11 +6,18 @@
       </li>
       <li><a routerLink="/books">Books</a></li>
       <li><a routerLink="/posts">Posts</a></li>
-      <li><a routerLink="#">Create a Post</a></li>
-      <li><a routerLink="/profile">My profile</a></li>
+      <div *ngIf="isLoggedIn">
+        <ul class="nav">
+          <li><a routerLink="#">Create a Post</a></li>
+          <li><a routerLink="/profile">My profile</a></li>
+        </ul>
+      </div>
     </ul>
-    <span
+    <span *ngIf="!isLoggedIn"
       ><a routerLink="/auth/register" class="button-23">Join Our Club!</a></span
+    >
+    <span *ngIf="isLoggedIn"
+      ><a (click)="logout()" class="button-23">Log out</a></span
     >
     <!-- <span><button class="button">Log out</button></span> -->
   </div>
