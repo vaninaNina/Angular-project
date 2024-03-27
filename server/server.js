@@ -1348,7 +1348,7 @@
     			_id: "0a1b2c3d4-5e6f7a8-9b1c2d3-4e5f6a7"
     		},
     		"1e2b3a4d5-6f7e8c9-0a1b2c3-4e5f6d7": {
-    			title: "Find your piece(s)",
+    			title: "Find your pieces)",
     			description: "We have a special collection of art NTF pieces from which you can choose the one that is most aligned to your personality.",
     			iconClass: "icon64 icon64-2",
     			badgeClass: "pennant pennant-alt",
@@ -1356,33 +1356,57 @@
     		},
     		"4d5e6f7a8-1b2c3d4-5e6f7a8-9b0c1d2": {
     			title: "Be part of our community",
-    			description: "You have the opportunity to share your thoughts with our community. You can comment the other's blog posts and create your blog post(s) for a topic related to the NFT world which will be added to our Blog.",
+    			description: "You have the opportunity to share your thoughts with our community. You can comment the others blog posts and create your blog posts) for a topic related to the NFT world which will be added to our Blog.",
     			iconClass: "icon64 icon64-3",
     			badgeClass: "pennant pennant-alt2",
     			_id: "4d5e6f7a8-1b2c3d4-5e6f7a8-9b0c1d2"
     		}
     	},
-    	blogPost: {
+    	reviews: {
     		"7e8d9a0b1-2c3d4e5-6f7a8b9-1c2d3e4": {
-    			imageUrl: "https://images.unsplash.com/photo-1634986666676-ec8fd927c23d?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    			imageUrl: "https://i.pinimg.com/564x/c4/3c/3c/c43c3c8956d8dea3bac31b369fb67835.jpg",
     			_id: "7e8d9a0b1-2c3d4e5-6f7a8b9-1c2d3e4",
-    			title: "Navigating the NFT Revolution: A Beginner's Guide to Non-Fungible Tokens",
+    			title: "The Night Circus by Erin Morgenstern",
     			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			author: "George Petkov",
-    			text: "In recent years, a technological wave has transformed the way we perceive and trade digital assets, and at the forefront of this revolution are Non-Fungible Tokens (NFTs). NFTs have gained unprecedented popularity, captivating the art, entertainment, and gaming industries. Let's delve into the world of NFTs, exploring what they are, how they work, and why they've become a game-changer in the digital landscape. Understanding NFTs: NFTs are unique digital assets that represent ownership or proof of authenticity of a specific item or piece of content, typically stored on a blockchain. Unlike cryptocurrencies such as Bitcoin or Ethereum, which are fungible and can be exchanged on a one-to-one basis, NFTs are indivisible and cannot be replicated.In conclusion, NFTs represent a paradigm shift in the digital economy, offering creators new ways to monetize their work and buyers unique opportunities to own and trade digital assets. As the technology continues to mature, the impact of NFTs on various industries is likely to deepen, making them a fascinating and transformative force in the world of digital ownership."
+    			author: "George",
+    			text: "The Night Circus is a mesmerizing journey into a world of magic and wonder. As a reader who adores fantasy, I was immediately captivated by Morgensterns lush prose and imaginative storytelling. The intricate descriptions of the circuss enchanting attractions made me feel like I was truly wandering its magical tents. The characters, particularly Celia and Marco, felt alive and complex, drawing me deeper into their mysterious competition. This novel is not just a story; its an experience that stays with you long after you have turned the final page. The Night Circus is a must-read for anyone who craves a magical escape from reality."
     		},
     		"6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0": {
-    			imageUrl: "https://images.unsplash.com/photo-1637416067365-2b5e7e8fe8fa?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    			imageUrl: "https://i.pinimg.com/564x/27/11/01/271101c51ba5ee93b58c33fdf99dbbf0.jpg",
     			_id: "6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0",
-    			title: "The Rise of NFTs in the Art World: Revolutionizing Ownership and Creativity",
+    			title: "The Alchemist by Paulo Coelho",
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			author: "Peter Stoyanov",
-    			text: "The art world is experiencing a revolution, and at the heartof it is the rise of Non-Fungible Tokens (NFTs). These digital tokens have disrupted traditional notions of art ownership and proven to be a game-changer for both artists and collectors. Let's explore how NFTs are reshaping the art market, offering new possibilities and challenges.NFTs have opened up unprecedented opportunities for digital artists who, in the past, struggled to monetize their work. By tokenizing digital art, creators can sell their pieces directly to a global audience, breaking down geographical barriers and reaching collectors who appreciate the unique nature of digital creations.While the NFT art market has seen tremendous success, it has not been without its share of challenges and criticisms. Environmental concerns related to the energy consumption of blockchain networks, issues of copyright infringement, and the potential for market manipulation are some of the hurdles that the NFT art space is actively addressing. In conclusion, NFTs have ushered in a new era for the art world, transforming the way we create, buy, and sell digital art. As the technology continues to evolve, the impact of NFTs on the art market is likely to grow, offering exciting possibilities for artists, collectors, and art enthusiasts alike."
+    			author: "Peter",
+    			text: "The Alchemist is a soul-stirring journey of self-discovery and personal legend. Coelhos writing has a profound simplicity that speaks directly to the heart. Reading Santiagos quest to fulfill his dreams resonated deeply with me, reminding me of the importance of pursuing our own paths in life. The novels messages about following ones passions and embracing the unknown struck a chord with me, inspiring me to reassess my own goals and aspirations. The Alchemist is not just a book; its a guiding light for anyone seeking purpose and fulfillment."
+    		},
+    		"7a6b5c4d3-2f1e0d9c8-7b6a5a4b3-e9d8": {
+    			imageUrl: "https://i.pinimg.com/564x/a2/f1/92/a2f19278c2b7dcf187bf71b83ca6a800.jpg",
+    			_id: "6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0",
+    			title: "The Kite Runner by Khaled Hosseini",
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			author: "Peter",
+    			text: "The Kite Runner is a poignant tale of friendship, betrayal, and redemption set against the backdrop of Afghanistans tumultuous history. Hosseinis vivid prose brings the characters and settings to life in a way that is both beautiful and heartbreaking. As a reader, I was deeply moved by Amir and Hassans bond, as well as the guilt and remorse that Amir carries with him throughout the story. The novels exploration of forgiveness and redemption left a lasting impact on me, reminding me of the power of empathy and compassion. The Kite Runner is a powerful and unforgettable read that will stay with you long after you've finished it."
+    		},
+    		"48b7c6d5-4f3e2d1c0-9c8b7a6b5-4d": {
+    			imageUrl: "https://i.pinimg.com/736x/bb/2a/f5/bb2af583e435013e80f01119d1909afe.jpg",
+    			_id: "6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0",
+    			title: "The Book Thief by Markus Zusak",
+    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+    			author: "George",
+    			text: "The Book Thief is a hauntingly beautiful novel that explores the power of words and the resilience of the human spirit during one of historys darkest periods. Zusaks unique narrative voice, Death himself, offers a fresh perspective on World War II and its impact on ordinary lives. As a reader, I was spellbound by Liesels story, from her humble beginnings to her courageous acts of defiance against tyranny. The novels themes of love, loss, and the enduring power of literature left me breathless and in awe. The Book Thief is a masterpiece that reminds us of the beauty and strength found in the midst of tragedy."
+    		},
+    		"8a7b6c5d4-3f2e1d0c9-8c7b6a5b4-3d2e": {
+    			imageUrl: "https://i.pinimg.com/564x/d5/e8/1b/d5e81ba35632381208aab57b949df40e.jpg",
+    			_id: "6a5b4c3d2-1f0e9d8-7c6b5a4-3e2f1d0",
+    			title: "Educated by Tara Westover",
+    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+    			author: "Peter",
+    			text: "Educated is a gripping memoir that chronicles Tara Westover's journey from a childhood in rural Idaho, raised by survivalist parents with no formal education, to earning a PhD from Cambridge University. As a reader, I was both shocked and inspired by Tara's resilience and determination in the face of unimaginable adversity. Her story is a testament to the transformative power of education and the human spirit's capacity to overcome even the most daunting obstacles. Educated is a raw and powerful memoir that will challenge you to question your own assumptions about identity, family, and the pursuit of knowledge."
     		}
     	},
     	books: {
     		"9a8b7e6d5-4c3a2f1-8d7e9b1-a4b5c6": {
-    			title: "The Handmaid's Tale",
+    			title: "The Handmaids Tale",
     			details: "Offred is a Handmaid in the Republic of Gilead. She may leave the home of the Commander and his wife once a day to walk to food markets whose signs are now pictures instead of words because women are no longer allowed to read. She must lie on her back once a month and pray that the Commander makes her pregnant, because in an age of declining births, Offred and the other Handmaids are valued only if their ovaries are viable.",
     			genre: "Fiction",
     			published: "1985",
@@ -1392,7 +1416,7 @@
     		},
     		"8e7b6a2-3f8c-4d9b-a1d2-9e8a7b6d5c4": {
     			title: "Just Kids",
-    			details: "In Just Kids, Patti Smith's first book of prose, the legendary American artist offers a never-before-seen glimpse of her remarkable relationship with photographer Robert Mapplethorpe in the epochal days of New York City and the Chelsea Hotel in the late sixties and seventies. An honest and moving story of youth and friendship, Smith brings the same unique, lyrical quality to Just Kids as she has to the rest of her formidable body of work--from her influential 1975 album Horses to her visual art and poetry.",
+    			details: "In Just Kids, Patti Smiths first book of prose, the legendary American artist offers a never-before-seen glimpse of her remarkable relationship with photographer Robert Mapplethorpe in the epochal days of New York City and the Chelsea Hotel in the late sixties and seventies. An honest and moving story of youth and friendship, Smith brings the same unique, lyrical quality to Just Kids as she has to the rest of her formidable body of work--from her influential 1975 album Horses to her visual art and poetry.",
     			genre: "Memoir",
     			published: "2010",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1706691407i/206318521.jpg",
@@ -1401,7 +1425,7 @@
     		},
     		"e5b4d3a7-6c8f-4d9a-b3e2-1f8e9a4b5c6": {
     			title: "Harry Potter and the Sorcerer’s Stone",
-    			details: "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
+    			details: "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harrys eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
     			genre: "Fantasy",
     			published: "1997",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598823299i/42844155.jpg",
@@ -1428,7 +1452,7 @@
     		},
     		"9bae6d8-793e-46c4-a9db-deb9e34849": {
     			title: "Educated",
-    			details: "Tara Westover was 17 the first time she set foot in a classroom. Born to survivalists in the mountains of Idaho, she prepared for the end of the world by stockpiling home-canned peaches and sleeping with her head-for-the-hills bag. In the summer she stewed herbs for her mother, a midwife and healer, and in the winter she salvaged in her father's junkyard.",
+    			details: "Tara Westover was 17 the first time she set foot in a classroom. Born to survivalists in the mountains of Idaho, she prepared for the end of the world by stockpiling home-canned peaches and sleeping with her head-for-the-hills bag. In the summer she stewed herbs for her mother, a midwife and healer, and in the winter she salvaged in her fathers junkyard.",
     			genre: "Memoir",
     			published: "2018",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1506026635i/35133922.jpg",
@@ -1437,7 +1461,7 @@
     		},
     		"5f4c24a-7f82-41d3-baee-7c3a927e538": {
     			title: "The Great Gatsby",
-    			details: "The Great Gatsby, F. Scott Fitzgerald's third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted gin was the national drink and sex the national obsession, it is an exquisitely crafted tale of America in the 1920s.",
+    			details: "The Great Gatsby, F. Scott Fitzgeralds third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted gin was the national drink and sex the national obsession, it is an exquisitely crafted tale of America in the 1920s.",
     			genre: "Classics",
     			published: "1925",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490528560i/4671.jpg",
@@ -1632,7 +1656,7 @@
     		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
     			title: "Top Gun 2",
-    			description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+    			description: "After more than thirty years of service as one of the Navys top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
     			img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
     			_createdOn: 1614935268135,
     			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
