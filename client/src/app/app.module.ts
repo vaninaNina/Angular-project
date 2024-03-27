@@ -9,6 +9,7 @@ import { SharedModule } from "./shared/shared.module";
 import { HttpClientModule } from "@angular/common/http";
 import { BooksModule } from "./books/books.module";
 import { CoreModule } from "./core/core.module";
+import { PostsModule } from "./posts/posts.module";
 
 @NgModule({
   declarations: [AppComponent],
@@ -19,6 +20,7 @@ import { CoreModule } from "./core/core.module";
     CoreModule,
     AppRoutingModule,
     BooksModule,
+    PostsModule,
     HttpClientModule,
   ],
   providers: [],
