@@ -29,7 +29,12 @@ export class UserService implements OnDestroy {
   login(email: string, password: string) {
     return this.http
       .post<UserForAuth>(`${this.api}/login`, { email, password })
-      .pipe(tap((user) => this.user$$.next(user)));
+      .pipe(
+        tap((user) => {
+          this.user$$.next(user);
+          localStorage.setItem("token", JSON.stringify(user));
+        })
+      );
   }
 
   register(
@@ -45,13 +50,34 @@ export class UserService implements OnDestroy {
         password,
         rePassword,
       })
-      .pipe(tap((user) => this.user$$.next(user)));
+      .pipe(
+        tap((user) => {
+          this.user$$.next(user);
+          localStorage.setItem("token", JSON.stringify(user));
+        })
+      );
   }
 
   logout() {
+    return this.http.post(`${this.api}/logout`, {}).pipe(
+      tap(() => {
+        this.user$$.next(undefined);
+        localStorage.removeItem("token");
+      })
+    );
+  }
+
+  getMyProfile() {
     return this.http
-      .post(`${this.api}/logout`, {})
-      .pipe(tap(() => this.user$$.next(undefined)));
+      .get<UserForAuth>(`${this.api}/me`)
+      .pipe(tap((user) => this.user$$.next(user)));
+  }
+  getMyPosts() {
+    //TODO
+  }
+
+  getSavedBooks() {
+    //TODO
   }
 
   ngOnDestroy(): void {
