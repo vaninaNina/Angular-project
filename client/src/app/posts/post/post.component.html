@@ -7,6 +7,10 @@
       <p>
         Review: <span id="review-text"> {{ post.text }}</span>
       </p>
+      <div *ngIf="isOwner! && isLoggedIn">
+        <a routerLink="/posts/{{ post._id }}/edit" style="color: black">Edit</a>
+        <a routerLink="#" style="color: black">Delete</a>
+      </div>
       <div *ngIf="isLoggedIn" class="comments">
         <h3>Comments</h3>
         <textarea

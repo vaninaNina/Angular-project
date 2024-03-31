@@ -21,6 +21,15 @@ export class PostComponent implements OnInit {
     return this.userService.isLogged;
   }
 
+  loggedUser = this.userService.user?._id ?? "";
+
+  get isOwner(): boolean {
+    if (this.post._ownerId == this.loggedUser) {
+      return true;
+    } else {
+      return false;
+    }
+  }
   ngOnInit(): void {
     this.activeRoute.params.subscribe((data) => {
       const id = data["postId"];

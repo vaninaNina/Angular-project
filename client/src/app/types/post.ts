@@ -7,4 +7,5 @@ export interface Post {
   author: UserForAuth;
   comments: string[];
   likes: string;
+  _ownerId: string;
 }
