@@ -1,14 +1,25 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable } from "@angular/core";
 import { Book } from "./types/book";
 import { Post } from "./types/post";
+import { UserService } from "./user/user.service";
 
 @Injectable({
   providedIn: "root",
 })
 export class ApiService {
   api = "http://localhost:3030/data";
-  constructor(private http: HttpClient) {}
+  token = localStorage.getItem("accessToken") ?? "";
+  retrievedToken: string = this.token;
+
+  constructor(private http: HttpClient, private userService: UserService) {}
+
+  httpOptions = {
+    headers: {
+      "X-Authorization": this.retrievedToken,
+      "Content-Type": "application/json",
+    },
+  };
 
   getBooks() {
     return this.http.get<Book[]>(`${this.api}/books`);
@@ -24,5 +35,18 @@ export class ApiService {
 
   getPost(postId: string) {
     return this.http.get<Post>(`${this.api}/reviews/${postId}`);
+  }
+
+  createPost(title: string, text: string, imageUrl: string) {
+    console.log(this.token);
+    return this.http.post<Post>(
+      `${this.api}/reviews`,
+      {
+        title,
+        text,
+        imageUrl,
+      },
+      this.httpOptions
+    );
   }
 }

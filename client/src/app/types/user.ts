@@ -3,6 +3,7 @@ export interface UserForAuth {
   _id: string;
   email: string;
   password: string;
+  accessToken: string;
 }
 
 export interface Profile {

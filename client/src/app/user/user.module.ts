@@ -7,15 +7,9 @@ import { SharedModule } from "../shared/shared.module";
 import { UserRoutingModule } from "./user-routing.module";
 import { RouterModule } from "@angular/router";
 import { ProfileComponent } from "./profile/profile.component";
-import { AuthenticateComponent } from "./authenticate/authenticate.component";
 
 @NgModule({
-  declarations: [
-    RegisterComponent,
-    LoginComponent,
-    ProfileComponent,
-    AuthenticateComponent,
-  ],
+  declarations: [RegisterComponent, LoginComponent, ProfileComponent],
   imports: [
     CommonModule,
     UserRoutingModule,

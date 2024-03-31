@@ -10,9 +10,10 @@ import { HttpClientModule } from "@angular/common/http";
 import { BooksModule } from "./books/books.module";
 import { CoreModule } from "./core/core.module";
 import { PostsModule } from "./posts/posts.module";
+import { AuthenticateComponent } from "./user/authenticate/authenticate.component";
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, AuthenticateComponent],
   imports: [
     BrowserModule,
     SharedModule,
