@@ -9,7 +9,7 @@
       </p>
       <div *ngIf="isOwner! && isLoggedIn">
         <a routerLink="/posts/{{ post._id }}/edit" style="color: black">Edit</a>
-        <a routerLink="#" style="color: black">Delete</a>
+        <button style="color: black" (click)="onDelete()">Delete</button>
       </div>
       <div *ngIf="isLoggedIn" class="comments">
         <h3>Comments</h3>

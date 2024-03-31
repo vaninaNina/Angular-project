@@ -58,4 +58,11 @@ export class ApiService {
       this.httpOptions
     );
   }
+
+  deletePost(postId: string) {
+    return this.http.delete<Post>(
+      `${this.api}/reviews/${postId}`,
+      this.httpOptions
+    );
+  }
 }
