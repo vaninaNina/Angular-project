@@ -1,0 +1,61 @@
+<div class="container">
+  <h2>Create a Post</h2>
+  <form #form="ngForm" (ngSubmit)="addPost(form)">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        ngModel
+        minlength="5"
+        #inputTitle="ngModel"
+        required
+      />
+    </div>
+    <ng-container *ngIf="inputTitle.touched">
+      <p class="error" *ngIf="inputTitle?.errors?.['required']">
+        Theme name is required.
+      </p>
+      <p class="error" *ngIf="inputTitle?.errors?.['minlength']">
+        Theme name must be at least 5 characters long.
+      </p>
+    </ng-container>
+    <div class="form-group">
+      <label for="text">Text:</label>
+      <textarea
+        id="text"
+        name="text"
+        minlength="10"
+        required
+        ngModel
+        #textareaPostText="ngModel"
+      ></textarea>
+    </div>
+    <ng-container *ngIf="textareaPostText.touched">
+      <p class="error" *ngIf="textareaPostText?.errors?.['required']">
+        The field with your post is required.
+      </p>
+      <p class="error" *ngIf="textareaPostText?.errors?.['minlength']">
+        Post must be at least 10 characters long.
+      </p>
+    </ng-container>
+    <div class="form-group">
+      <label for="imageUrl">Image URL:</label>
+      <input
+        type="text"
+        name="imageUrl"
+        id="imageUrl"
+        required
+        ngModel
+        #inputImageUrl="ngModel"
+      />
+    </div>
+    <ng-container *ngIf="inputImageUrl.touched">
+      <p class="error" *ngIf="inputImageUrl?.errors?.['required']">
+        The field is required.
+      </p>
+    </ng-container>
+    <button type="submit">Create Post</button>
+  </form>
+</div>
