@@ -37,7 +37,7 @@ export class ApiService {
     return this.http.get<Post>(`${this.api}/reviews/${postId}`);
   }
 
-  createPost(title: string, text: string, imageUrl: string) {
+  createPost(title: string, text: string, imageUrl: string, author: string) {
     console.log(this.token);
     return this.http.post<Post>(
       `${this.api}/reviews`,
@@ -45,6 +45,7 @@ export class ApiService {
         title,
         text,
         imageUrl,
+        author,
       },
       this.httpOptions
     );

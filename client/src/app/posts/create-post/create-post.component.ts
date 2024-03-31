@@ -10,15 +10,19 @@ import { UserService } from "src/app/user/user.service";
   styleUrls: ["./create-post.component.css"],
 })
 export class CreatePostComponent {
-  constructor(private apiService: ApiService, private router: Router) {}
+  constructor(
+    private apiService: ApiService,
+    private router: Router,
+    private userService: UserService
+  ) {}
 
   addPost(form: NgForm) {
     if (form.invalid) {
       return;
     }
-
+    const author = this.userService.user?.username ?? "";
     const { title, text, imageUrl } = form.value;
-    this.apiService.createPost(title, text, imageUrl).subscribe(() => {
+    this.apiService.createPost(title, text, imageUrl, author).subscribe(() => {
       this.router.navigate(["/posts"]);
     });
   }
