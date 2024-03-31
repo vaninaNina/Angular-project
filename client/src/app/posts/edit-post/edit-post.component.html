@@ -1,23 +1,22 @@
 <div class="container">
-  <form #editForm="ngForm">
-    <!-- (ngSubmit)="onSubmit()" -->
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
     <label for="title">Title:</label>
     <input
       type="text"
       id="title"
       name="title"
       ngModel
-      [value]="post.title"
+      [(ngModel)]="post.title"
       required
     /><br /><br />
-    <!-- <h4>Published by: {{ post.author }}</h4>
-    <br /><br /> -->
+    <h4>Published by: {{ post.author }}</h4>
+    <br /><br />
     <label for="text">Review:</label>
     <textarea
       id="text"
       name="text"
       rows="4"
-      [value]="post.text"
+      [(ngModel)]="post.text"
       ngModel
       required
     ></textarea
@@ -28,7 +27,7 @@
       type="text"
       id="imageUrl"
       name="imageUrl"
-      [value]="post.imageUrl"
+      [(ngModel)]="post.imageUrl"
       ngModel
       required
     /><br /><br />

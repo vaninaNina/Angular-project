@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { NgForm } from "@angular/forms";
 import { ActivatedRoute, Router } from "@angular/router";
 import { ApiService } from "src/app/api.service";
 import { Post } from "src/app/types/post";
@@ -12,10 +13,10 @@ export class EditPostComponent implements OnInit {
   constructor(
     private activeRoute: ActivatedRoute,
     private router: Router,
-    private apiService: ApiService // Inject your post service
+    private apiService: ApiService
   ) {}
 
-  post = {} as Post;
+  post = { title: "", text: "", imageUrl: "" } as Post;
   ngOnInit(): void {
     this.activeRoute.params.subscribe((data) => {
       const id = data["postId"];
@@ -25,5 +26,16 @@ export class EditPostComponent implements OnInit {
       });
     });
   }
-  onSubmit(): void {}
+  onSubmit(form: NgForm): void {
+    // if (form.invalid) {
+    //   return;
+    // }
+    this.activeRoute.params.subscribe((data) => {
+      const id = data["postId"];
+
+      this.apiService.editPost(id, form.value).subscribe(() => {
+        this.router.navigate([`/posts/${id}`]);
+      });
+    });
+  }
 }

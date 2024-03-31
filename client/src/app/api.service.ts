@@ -52,6 +52,10 @@ export class ApiService {
   }
 
   editPost(postId: string, postData: Post) {
-    return this.http.put<Post>(`${this.api}/reviews/${postId}`, postData);
+    return this.http.put<Post>(
+      `${this.api}/reviews/${postId}`,
+      postData,
+      this.httpOptions
+    );
   }
 }
