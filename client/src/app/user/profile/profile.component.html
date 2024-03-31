@@ -10,30 +10,11 @@
   <section id="posts">
     <h2>My Posts</h2>
     <div class="posts">
-      <div class="post">
-        <h3>Title of Post 1</h3>
-        <p>Description of Post 1</p>
+      <div class="post" *ngFor="let post of filteredPosts">
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.text.slice(0, 70) + "..." }}</p>
+        <a routerLink="/posts/{{ post._id }}">Open it</a>
       </div>
-      <div class="post">
-        <h3>Title of Post 2</h3>
-        <p>Description of Post 2</p>
-      </div>
-      <!-- Add more posts as needed -->
-    </div>
-  </section>
-
-  <section id="saved-books">
-    <h2>Saved Books</h2>
-    <div class="saved-books">
-      <div class="book">
-        <h3>Title of Book 1</h3>
-        <p>Description of Book 1</p>
-      </div>
-      <div class="book">
-        <h3>Title of Book 2</h3>
-        <p>Description of Book 2</p>
-      </div>
-      <!-- Add more saved books as needed -->
     </div>
   </section>
 </div>

@@ -6,9 +6,7 @@ export interface UserForAuth {
   accessToken: string;
 }
 
-export interface Profile {
-  username: string;
-  email: string;
-  savedBooks: string[];
-  posts: string[];
-}
+// export interface Profile {
+//   username: string;
+//   email: string;
+// }

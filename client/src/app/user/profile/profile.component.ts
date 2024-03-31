@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { UserService } from "../user.service";
-import { Profile } from "src/app/types/user";
+import { ApiService } from "src/app/api.service";
+import { Post } from "src/app/types/post";
 
 @Component({
   selector: "app-profile",
@@ -8,18 +9,24 @@ import { Profile } from "src/app/types/user";
   styleUrls: ["./profile.component.css"],
 })
 export class ProfileComponent implements OnInit {
-  profile: Profile = {
-    username: "",
-    email: "",
-    savedBooks: [],
-    posts: [],
-  };
-  constructor(private userService: UserService) {}
+  filteredPosts: Post[] = [];
+  constructor(
+    private userService: UserService,
+    private apiService: ApiService
+  ) {}
   get username(): string {
     return this.userService.user?.username || "";
   }
   get email(): string {
     return this.userService.user?.email || "";
   }
-  ngOnInit(): void {}
+
+  ngOnInit() {
+    this.apiService.getPosts().subscribe((posts) => {
+      this.filteredPosts = posts.filter(
+        (post) => post._ownerId === this.userService.user?._id
+      );
+      console.log("Filtered Posts:", this.filteredPosts);
+    });
+  }
 }

@@ -24,14 +24,25 @@ h1,
 h2 {
   text-align: center;
 }
-.posts,
-.saved-books {
+.posts {
   margin-top: 20px;
 }
-.post,
-.book {
+.post {
   margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+}
+
+a {
+  display: inline-block;
+  border: none;
+  padding: 0.1em;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+a:hover {
+  background-color: #d7c8ad;
+  color: black;
 }
