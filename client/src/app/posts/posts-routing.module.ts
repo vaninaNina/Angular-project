@@ -4,6 +4,7 @@ import { AllPostsComponent } from "./all-posts/all-posts.component";
 import { PostComponent } from "./post/post.component";
 import { CreatePostComponent } from "./create-post/create-post.component";
 import { AuthActivate } from "../guards/auth.activate";
+import { EditPostComponent } from "./edit-post/edit-post.component";
 
 const routes: Routes = [
   { path: "", component: AllPostsComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
     component: CreatePostComponent,
     canActivate: [AuthActivate],
   },
+  { path: ":postId/edit", component: EditPostComponent },
 ];
 
 @NgModule({
