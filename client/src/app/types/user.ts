@@ -1,9 +1,9 @@
 export interface UserForAuth {
-  username: string;
+  username: string | "";
   _id: string;
-  email: string;
-  password: string;
-  accessToken: string;
+  email: string | "";
+  password: string | "";
+  accessToken: string | "";
 }
 
 // export interface Profile {
