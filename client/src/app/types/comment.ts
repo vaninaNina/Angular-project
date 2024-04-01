@@ -1,7 +1,6 @@
 export interface CommentInterface {
-  id: string;
-  _ownerId: string;
-  username: string;
+  _ownerId: string | undefined;
+  username: string | undefined;
   content: string;
   reviewId: string;
 }

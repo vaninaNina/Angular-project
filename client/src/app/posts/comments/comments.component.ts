@@ -17,10 +17,12 @@ export class CommentsComponent implements OnInit {
     private router: Router,
     private activeRoute: ActivatedRoute
   ) {}
+  ownerId = this.userService.user?._id;
   username = this.userService.user?.username;
   postId: string = "";
   comment: string = "";
   postComments: CommentInterface[] = [];
+  comments: string[] = [];
 
   ngOnInit(): void {
     this.activeRoute.params.subscribe((params) => {
@@ -32,15 +34,24 @@ export class CommentsComponent implements OnInit {
         });
     });
   }
+  post() {
+    if (this.comment.trim() !== "") {
+      const newComment: CommentInterface = {
+        _ownerId: this.ownerId,
+        username: this.username,
+        content: this.comment,
+        reviewId: this.postId,
+      };
 
-  // post() {
-  //   if (this.comment.trim() !== "") {
-  //     this.commentService
-  //       .addCommentToReview(this.postId, this.comment)
-  //       .subscribe((this.comment) => {
-  //         this.postComments.push();
-  //         this.comment = "";
-  //       });
-  //   }
-  // }
+      this.commentService.addCommentToReview(this.postId, newComment).subscribe(
+        (addedComment: CommentInterface) => {
+          this.postComments.push(addedComment);
+          this.comment = "";
+        },
+        (error) => {
+          console.error("Error adding comment:", error);
+        }
+      );
+    }
+  }
 }
