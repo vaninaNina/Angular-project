@@ -20,3 +20,11 @@ button:hover {
   background-color: #d7c8ad;
   color: black;
 }
+
+.error {
+  font-size: 10px;
+}
+
+p {
+  color: black;
+}
