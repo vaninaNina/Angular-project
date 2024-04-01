@@ -13,7 +13,7 @@ export class LoginComponent {
 
   login(form: NgForm) {
     if (form.invalid) {
-      return;
+      return alert("Invalid details entered.");
     }
     const { email, password } = form.value;
 
