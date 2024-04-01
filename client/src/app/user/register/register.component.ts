@@ -1,8 +1,4 @@
 import { Component } from "@angular/core";
-// import { FormBuilder, Validators } from "@angular/forms";
-// import { emailValidator } from "src/app/shared/utils/email-validator";
-// import { ValidatorFn } from "@angular/forms";
-// import { matchPasswordsValidator } from "src/app/shared/utils/password-validator";
 import { UserService } from "../user.service";
 import { Router } from "@angular/router";
 import { NgForm } from "@angular/forms";
