@@ -1,0 +1,10 @@
+<h3>Comments</h3>
+<textarea
+  id="comment-input"
+  placeholder="Add your comment..."
+  [(ngModel)]="comment"
+></textarea>
+<button (click)="post()" id="add-comment-btn">Comment</button>
+<div *ngFor="let comment of postComments" id="comments-list">
+  <p>{{ this.username }}: {{ comment }}</p>
+</div>

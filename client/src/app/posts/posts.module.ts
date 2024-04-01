@@ -7,9 +7,10 @@ import { RouterModule } from "@angular/router";
 import { CreatePostComponent } from "./create-post/create-post.component";
 import { FormsModule } from "@angular/forms";
 import { EditPostComponent } from './edit-post/edit-post.component';
+import { CommentsComponent } from './comments/comments.component';
 
 @NgModule({
-  declarations: [AllPostsComponent, PostComponent, CreatePostComponent, EditPostComponent],
+  declarations: [AllPostsComponent, PostComponent, CreatePostComponent, EditPostComponent, CommentsComponent],
   imports: [CommonModule, PostsRoutingModule, RouterModule, FormsModule],
 })
 export class PostsModule {}
