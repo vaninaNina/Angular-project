@@ -4,7 +4,10 @@
   placeholder="Add your comment..."
   [(ngModel)]="comment"
 ></textarea>
-<button (click)="post()" id="add-comment-btn">Comment</button>
+<button id="add-comment-btn">Comment</button>
+<div *ngIf="postComments.length === 0" id="comments-list">
+  <p>'No comments yet'</p>
+</div>
 <div *ngFor="let comment of postComments" id="comments-list">
-  <p>{{ this.username }}: {{ comment }}</p>
+  <p>{{ comment.username }}: {{ comment.content }}</p>
 </div>
