@@ -22,7 +22,7 @@ export class AuthGuard {
     if (this.userService.isLogged) {
       return true;
     } else {
-      return this.router.createUrlTree(["/login"]);
+      return this.router.navigate(["/login"]);
     }
   }
 }

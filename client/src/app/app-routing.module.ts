@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { MainComponent } from "./core/main/main.component";
 import { ErrorComponent } from "./core/error/error.component";
 import { CreatePostComponent } from "./posts/create-post/create-post.component";
+import { AuthGuard } from "./guards/auth.guard";
 
 const routes: Routes = [
   { path: "", component: MainComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   {
     path: "create",
     component: CreatePostComponent,
+    canActivate: [AuthGuard],
   },
   { path: "**", component: ErrorComponent },
 ];
