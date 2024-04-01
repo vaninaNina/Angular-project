@@ -39,18 +39,12 @@ export class UserService implements OnDestroy {
       );
   }
 
-  register(
-    username: string,
-    email: string,
-    password: string,
-    rePassword: string
-  ) {
+  register(username: string, email: string, password: string) {
     return this.http
       .post<UserForAuth>(`${this.api}/register`, {
         username,
         email,
         password,
-        rePassword,
       })
       .pipe(
         tap((user) => {

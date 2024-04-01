@@ -12,23 +12,28 @@
           ngModel
           required
           #inputUsername="ngModel"
+          minlength="1"
         />
       </div>
       <ng-container *ngIf="inputUsername.touched">
         <p class="error" *ngIf="inputUsername.errors?.['required']">
           Username is required!
         </p>
+        <p class="error" *ngIf="inputUsername.errors?.['minlength']">
+          Username must be at least 1 character!
+        </p>
       </ng-container>
       <div class="form-group">
         <label for="email">Email:</label>
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           placeholder="elena@abv.bg"
           ngModel
           required
           #inputEmail="ngModel"
+          [pattern]="regExp"
         />
       </div>
 
@@ -36,7 +41,7 @@
         <p class="error" *ngIf="inputEmail.errors?.['required']">
           Email is required!
         </p>
-        <p class="error" *ngIf="inputEmail.errors?.['emailValidator']">
+        <p class="error" *ngIf="inputEmail.errors?.['pattern']">
           Email is not valid!
         </p>
       </ng-container>
@@ -51,9 +56,10 @@
           ngModel
           required
           #inputPassword="ngModel"
+          minlength="6"
         />
       </div>
-      <div class="form-group">
+      <!-- <div class="form-group">
         <label for="rePassword">Re-enter Password:</label>
         <input
           type="password"
@@ -64,21 +70,17 @@
           required
           #inputRePassword="ngModel"
         />
-      </div>
+      </div> -->
 
       <ng-container *ngIf="inputPassword.touched">
         <p class="error" *ngIf="inputPassword.errors?.['required']">
           Password is required!
         </p>
         <p class="error" *ngIf="inputPassword.errors?.['minlength']">
-          Password must be at least 5 characters!
+          Password must be at least 6 characters!
         </p>
-        <!-- <p
-            
-          >
-           Repeat Password do not match password!
-          </p> -->
       </ng-container>
+
       <button type="submit">Create Account</button>
     </form>
     <div class="login-container">

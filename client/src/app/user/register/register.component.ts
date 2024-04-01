@@ -1,7 +1,8 @@
 import { Component } from "@angular/core";
-import { FormBuilder, Validators } from "@angular/forms";
-import { emailValidator } from "src/app/shared/utils/email-validator";
-import { matchPasswordsValidator } from "src/app/shared/utils/password-validator";
+// import { FormBuilder, Validators } from "@angular/forms";
+// import { emailValidator } from "src/app/shared/utils/email-validator";
+// import { ValidatorFn } from "@angular/forms";
+// import { matchPasswordsValidator } from "src/app/shared/utils/password-validator";
 import { UserService } from "../user.service";
 import { Router } from "@angular/router";
 import { NgForm } from "@angular/forms";
@@ -12,36 +13,19 @@ import { NgForm } from "@angular/forms";
   styleUrls: ["./register.component.css"],
 })
 export class RegisterComponent {
-  // form = this.fb.group({
-  //   username: ["", Validators.required],
-  //   email: ["", [Validators.required, emailValidator()]],
-  //   passGroup: this.fb.group(
-  //     {
-  //       password: ["", [Validators.required]],
-  //       rePassword: ["", [Validators.required]],
-  //     },
-  //     {
-  //       validators: [matchPasswordsValidator("password", "rePassword")],
-  //     }
-  //   ),
-  // });
-  // get passGroup() {
-  //   return this.form.get("passGroup");
-  // }
-
   constructor(private userService: UserService, private router: Router) {}
+
+  regExp = new RegExp(`[A-Za-z0-9]+@abv\.bg`);
 
   register(form: NgForm) {
     if (form.invalid) {
       return;
     }
 
-    const { username, email, password, rePassword } = form.value;
+    const { username, email, password } = form.value;
 
-    this.userService
-      .register(username!, email!, password!, rePassword!)
-      .subscribe(() => {
-        this.router.navigate(["/"]);
-      });
+    this.userService.register(username!, email!, password!).subscribe(() => {
+      this.router.navigate(["/"]);
+    });
   }
 }
