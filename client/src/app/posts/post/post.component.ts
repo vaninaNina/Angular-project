@@ -4,6 +4,8 @@ import { ApiService } from "src/app/api.service";
 import { Post } from "src/app/types/post";
 import { UserService } from "src/app/user/user.service";
 import { Router } from "@angular/router";
+import { catchError } from "rxjs/operators";
+import { throwError } from "rxjs";
 
 @Component({
   selector: "app-post",
@@ -33,21 +35,32 @@ export class PostComponent implements OnInit {
     }
   }
   ngOnInit(): void {
-    this.activeRoute.params.subscribe((data) => {
-      const id = data["postId"];
+    this.activeRoute.params.subscribe({
+      next: (data) => {
+        const id = data["postId"];
 
-      this.apiService.getPost(id).subscribe((post) => {
-        this.post = post;
-      });
+        this.apiService.getPost(id).subscribe((post) => {
+          this.post = post;
+        });
+      },
+      error: (err) => {
+        console.error("Error: ", err);
+      },
     });
   }
   onDelete(): void {
-    this.activeRoute.params.subscribe((data) => {
-      const id = data["postId"];
+    this.activeRoute.params.subscribe({
+      next: (data) => {
+        const id = data["postId"];
 
-      this.apiService.deletePost(id).subscribe(() => {
-        this.router.navigate(["/posts"]);
-      });
+        this.apiService.deletePost(id).subscribe(() => {
+          this.router.navigate(["/posts"]);
+        });
+      },
+      error: (err) => {
+        console.log("Error: ", err);
+        this.router.navigate(["/error"]);
+      },
     });
   }
 }
