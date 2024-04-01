@@ -24,8 +24,14 @@ export class RegisterComponent {
 
     const { username, email, password } = form.value;
 
-    this.userService.register(username!, email!, password!).subscribe(() => {
-      this.router.navigate(["/"]);
+    this.userService.register(username!, email!, password!).subscribe({
+      next: () => {
+        this.router.navigate(["/"]);
+      },
+      error: (err) => {
+        console.log("Error:", err.error.message);
+        alert(err.error.message);
+      },
     });
   }
 }
