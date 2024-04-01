@@ -3,7 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { AllPostsComponent } from "./all-posts/all-posts.component";
 import { PostComponent } from "./post/post.component";
 import { CreatePostComponent } from "./create-post/create-post.component";
-import { AuthActivate } from "../guards/auth.activate";
+import { AuthGuard } from "../guards/auth.guard";
 import { EditPostComponent } from "./edit-post/edit-post.component";
 
 const routes: Routes = [
@@ -12,9 +12,13 @@ const routes: Routes = [
   {
     path: "create",
     component: CreatePostComponent,
-    canActivate: [AuthActivate],
+    canActivate: [AuthGuard],
   },
-  { path: ":postId/edit", component: EditPostComponent },
+  {
+    path: ":postId/edit",
+    component: EditPostComponent,
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({

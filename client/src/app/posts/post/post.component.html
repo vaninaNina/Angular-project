@@ -7,9 +7,13 @@
       <p>
         Review: <span id="review-text"> {{ post.text }}</span>
       </p>
-      <div *ngIf="isOwner! && isLoggedIn">
-        <a routerLink="/posts/{{ post._id }}/edit" style="color: black">Edit</a>
-        <button style="color: black" (click)="onDelete()">Delete</button>
+      <div class="buttons" *ngIf="isOwner! && isLoggedIn">
+        <span>
+          <a routerLink="/posts/{{ post._id }}/edit" class="button">Edit</a>
+        </span>
+        <span>
+          <button class="button" (click)="onDelete()">Delete</button>
+        </span>
       </div>
       <div *ngIf="isLoggedIn" class="comments">
         <h3>Comments</h3>

@@ -20,7 +20,6 @@ const routes: Routes = [
     loadChildren: () =>
       import("./posts/posts.module").then((m) => m.PostsModule),
   },
-
   {
     path: "create",
     component: CreatePostComponent,
