@@ -15,6 +15,9 @@
         <p>{{ post.text.slice(0, 70) + "..." }}</p>
         <a routerLink="/posts/{{ post._id }}">Open it</a>
       </div>
+      <div class="post" *ngIf="filteredPosts.length === 0">
+        <h2>No Posts yet.</h2>
+      </div>
     </div>
   </section>
 </div>
