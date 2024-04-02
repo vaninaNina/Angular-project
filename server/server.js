@@ -1412,6 +1412,7 @@
     			published: "1985",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1578028274i/38447.jpg",
     			author: "Margaret Atwood",
+    			likes: "3",
     			_id: "9a8b7e6d5-4c3a2f1-8d7e9b1-a4b5c6"
     		},
     		"8e7b6a2-3f8c-4d9b-a1d2-9e8a7b6d5c4": {
@@ -1421,6 +1422,7 @@
     			published: "2010",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1706691407i/206318521.jpg",
     			author: "Patti Smith",
+    			likes: "2",
     			_id: "8e7b6a2-3f8c-4d9b-a1d2-9e8a7b6d5c4"
     		},
     		"e5b4d3a7-6c8f-4d9a-b3e2-1f8e9a4b5c6": {
@@ -1430,6 +1432,7 @@
     			published: "1997",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1598823299i/42844155.jpg",
     			author: "J.K. Rowling",
+    			likes: "0",
     			_id: "e5b4d3a7-6c8f-4d9a-b3e2-1f8e9a4b5c6"
     		},
     		"2d4b6c9-8a0e-4d3c-9b1a-7e8f6a5b3c2f": {
@@ -1439,6 +1442,7 @@
     			published: "1992",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1451554846i/29044.jpg",
     			author: "Donna Tart",
+    			likes: "5",
     			_id: "2d4b6c9-8a0e-4d3c-9b1a-7e8f6a5b3c2f"
     		},
     		"f7e2a1-1b2d-4f85-89a7-6d3a2c9e0f4b": {
@@ -1448,6 +1452,7 @@
     			published: "2015",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1446469353i/22822858.jpg",
     			author: "Hanya Yanagihara",
+    			likes: "1",
     			_id: "f7e2a1-1b2d-4f85-89a7-6d3a2c9e0f4b"
     		},
     		"9bae6d8-793e-46c4-a9db-deb9e34849": {
@@ -1457,6 +1462,7 @@
     			published: "2018",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1506026635i/35133922.jpg",
     			author: "Tara Westover",
+    			likes: "4",
     			_id: "9bae6d8-793e-46c4-a9db-deb9e34849"
     		},
     		"5f4c24a-7f82-41d3-baee-7c3a927e538": {
@@ -1466,6 +1472,7 @@
     			published: "1925",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1490528560i/4671.jpg",
     			author: "F. Scott Fitzgerald",
+    			likes: "5",
     			_id: "5f4c24a-7f82-41d3-baee-7c3a927e538"
     		},
     		"c7bda61-9159-47f6-80c3-2f0db14a38d": {
@@ -1475,6 +1482,7 @@
     			published: "2021",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1603206535i/54120408.jpg",
     			author: "Kazuo Ishiguro",
+    			likes: "7",
     			_id: "c7bda61-9159-47f6-80c3-2f0db14a38d"
     		},
     		"8e79b32-6207-4a1e-b90d-f31c4b9b3fa": {
@@ -1484,6 +1492,7 @@
     			published: "2020",
     			imageUrl: "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1585832694i/52129515.jpg",
     			author: "Glennon Doyle",
+    			likes: "10",
     			_id: "8e79b32-6207-4a1e-b90d-f31c4b9b3fa"
     		}
     	},
