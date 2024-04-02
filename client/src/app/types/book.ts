@@ -6,5 +6,5 @@ export interface Book {
   published: string;
   imageUrl: string;
   author: string;
-  likes: string[];
+  likes: string;
 }
