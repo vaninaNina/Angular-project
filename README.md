@@ -8,7 +8,7 @@ Besties' Book Club is an online application that aims to build a community of pe
 
 The project is built using the Angular platform and framework for building a single-page application in combination with HTML and Typescript. For the back-end services, the project uses the SoftUni Practice Server which is built for educational purposes.
 
-Features:
+# Features:
 
 Book Catalog - this collection shows books that are managed only by the administrator of the application. Its aim is to provide the users with suggestions about books which they may want to read in the future together with brief sinopses. Both the users and the guests have access to this catalog and to the details page of each book.
 
@@ -16,7 +16,7 @@ Posts Blog - this part of the application provides our users with the opportunit
 
 My Profile - this is the user’s personal area in the web application which they can access after successful login. There they can find personal details and see/access the posts which they have created.
 
-Installation and Running
+# Installation and Running
 
 Navigate to the server directory:
 
@@ -40,7 +40,7 @@ Run the client part by:
 
 Navigate to `http://localhost:4200/`.
 
-Users and Guests:
+# Users and Guests:
 
 Non-registered users have limited access to the site’s features. Full access is granted once they have a registration. They can register with username, email and password.
 Users can sign up with their email and password and gain full access to all features.
