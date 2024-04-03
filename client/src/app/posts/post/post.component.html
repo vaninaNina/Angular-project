@@ -1,23 +1,25 @@
 <div class="container">
   <h1>{{ post.title }}</h1>
   <div class="review">
-    <img src="{{ post.imageUrl }}" alt="Book Cover" />
-    <div class="review-details">
-      <h4>Published by: {{ post.author }}</h4>
-      <p>
-        Review: <span id="review-text"> {{ post.text }}</span>
-      </p>
-      <div class="buttons" *ngIf="isOwner! && isLoggedIn">
-        <span>
-          <a routerLink="/posts/{{ post._id }}/edit" class="button">Edit</a>
-        </span>
-        <span>
-          <button class="button" (click)="onDelete()">Delete</button>
-        </span>
+    <div class="info">
+      <img src="{{ post.imageUrl }}" alt="Book Cover" />
+      <div class="review-details">
+        <h4>Published by: {{ post.author }}</h4>
+        <p>
+          Review: <span id="review-text"> {{ post.text }}</span>
+        </p>
+        <div class="buttons" *ngIf="isOwner! && isLoggedIn">
+          <span>
+            <a routerLink="/posts/{{ post._id }}/edit" class="button">Edit</a>
+          </span>
+          <span>
+            <button class="button" (click)="onDelete()">Delete</button>
+          </span>
+        </div>
       </div>
-      <div *ngIf="isLoggedIn" class="comments">
-        <app-comments id="comments-list"> </app-comments>
-      </div>
+    </div>
+    <div class="comments">
+      <app-comments id="comments-list"> </app-comments>
     </div>
   </div>
 </div>
