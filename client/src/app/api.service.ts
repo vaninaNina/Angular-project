@@ -9,17 +9,18 @@ import { UserService } from "./user/user.service";
 })
 export class ApiService {
   api = "http://localhost:3030/data";
-  token = localStorage.getItem("accessToken") ?? "";
-  retrievedToken: string = this.token;
 
   constructor(private http: HttpClient, private userService: UserService) {}
 
-  httpOptions = {
-    headers: {
-      "X-Authorization": this.retrievedToken,
-      "Content-Type": "application/json",
-    },
-  };
+  private getHttpOptions() {
+    const accessToken = localStorage.getItem("accessToken") || "";
+    return {
+      headers: {
+        "X-Authorization": accessToken,
+        "Content-Type": "application/json",
+      },
+    };
+  }
 
   getBooks() {
     return this.http.get<Book[]>(`${this.api}/books`);
@@ -44,7 +45,7 @@ export class ApiService {
     author: string,
     ownerId: string
   ) {
-    console.log(this.token);
+    const httpOptions = this.getHttpOptions();
     return this.http.post<Post>(
       `${this.api}/reviews`,
       {
@@ -54,22 +55,21 @@ export class ApiService {
         author,
         ownerId,
       },
-      this.httpOptions
+      httpOptions
     );
   }
 
   editPost(postId: string, postData: Post) {
+    const httpOptions = this.getHttpOptions();
     return this.http.put<Post>(
       `${this.api}/reviews/${postId}`,
       postData,
-      this.httpOptions
+      httpOptions
     );
   }
 
   deletePost(postId: string) {
-    return this.http.delete<Post>(
-      `${this.api}/reviews/${postId}`,
-      this.httpOptions
-    );
+    const httpOptions = this.getHttpOptions();
+    return this.http.delete<Post>(`${this.api}/reviews/${postId}`, httpOptions);
   }
 }
