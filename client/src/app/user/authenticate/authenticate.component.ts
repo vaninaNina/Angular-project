@@ -7,10 +7,11 @@ import { UserService } from "../user.service";
   styleUrls: ["./authenticate.component.css"],
 })
 export class AuthenticateComponent implements OnInit {
+  //are you authenticating now
   isAuthenticating = true;
 
   constructor(private userService: UserService) {}
-
+  //once done
   ngOnInit(): void {
     this.userService.getMyProfile().subscribe({
       next: () => {
