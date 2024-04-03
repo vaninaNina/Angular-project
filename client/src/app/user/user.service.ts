@@ -33,7 +33,6 @@ export class UserService implements OnDestroy {
         tap((user) => {
           this.user$$.next(user);
           localStorage.setItem("accessToken", user.accessToken);
-          //save token?
           console.log(JSON.stringify(user));
         })
       );
@@ -67,14 +66,6 @@ export class UserService implements OnDestroy {
     return this.http
       .get<UserForAuth>(`${this.api}/me`)
       .pipe(tap((user) => this.user$$.next(user)));
-  }
-
-  getMyPosts() {
-    //TODO
-  }
-
-  getSavedBooks() {
-    //TODO
   }
 
   ngOnDestroy(): void {
