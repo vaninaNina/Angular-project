@@ -13,12 +13,18 @@ export class LoginComponent {
 
   login(form: NgForm) {
     if (form.invalid) {
-      return alert("Invalid details entered.");
+      return;
     }
     const { email, password } = form.value;
 
-    this.userService.login(email, password).subscribe(() => {
-      this.router.navigate(["/"]);
+    this.userService.login(email, password).subscribe({
+      next: () => {
+        this.router.navigate(["/"]);
+      },
+      error: (err) => {
+        console.log("Error:", err.error.message);
+        alert(err.error.message);
+      },
     });
   }
 }
