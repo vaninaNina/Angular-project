@@ -27,9 +27,9 @@ export class EditPostComponent implements OnInit {
     });
   }
   onSubmit(form: NgForm): void {
-    // if (form.invalid) {
-    //   return;
-    // }
+    if (form.invalid) {
+      return;
+    }
     this.activeRoute.params.subscribe((data) => {
       const id = data["postId"];
 
