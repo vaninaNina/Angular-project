@@ -3,8 +3,11 @@
   id="comment-input"
   placeholder="Add your comment..."
   [(ngModel)]="comment"
+  *ngIf="isLoggedIn"
 ></textarea>
-<button (click)="post()" id="add-comment-btn">Comment</button>
+<button (click)="post()" id="add-comment-btn" *ngIf="isLoggedIn">
+  Comment
+</button>
 <div *ngIf="postComments.length === 0" id="comments-list">
   <p>'No comments yet'</p>
 </div>

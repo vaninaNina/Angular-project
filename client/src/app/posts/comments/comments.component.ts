@@ -17,6 +17,10 @@ export class CommentsComponent implements OnInit {
     private router: Router,
     private activeRoute: ActivatedRoute
   ) {}
+  get isLoggedIn(): boolean {
+    return this.userService.isLogged;
+  }
+
   ownerId = this.userService.user?._id;
   username = this.userService.user?.username;
   postId: string = "";
