@@ -34,7 +34,6 @@ export class PostComponent implements OnInit {
           this.post = post;
           this.owner = this.post._ownerId;
         });
-        console.log(this.owner);
       },
       error: (err) => {
         console.error("Error: ", err);
