@@ -4,8 +4,6 @@ import { ApiService } from "src/app/api.service";
 import { Post } from "src/app/types/post";
 import { UserService } from "src/app/user/user.service";
 import { Router } from "@angular/router";
-import { catchError } from "rxjs/operators";
-import { throwError } from "rxjs";
 
 @Component({
   selector: "app-post",
@@ -14,6 +12,7 @@ import { throwError } from "rxjs";
 })
 export class PostComponent implements OnInit {
   post = {} as Post;
+  owner = "";
   constructor(
     private apiService: ApiService,
     private activeRoute: ActivatedRoute,
@@ -24,16 +23,8 @@ export class PostComponent implements OnInit {
   get isLoggedIn(): boolean {
     return this.userService.isLogged;
   }
-
   loggedUser = this.userService.user?._id ?? "";
 
-  get isOwner(): boolean {
-    if (this.post._ownerId == this.loggedUser) {
-      return true;
-    } else {
-      return false;
-    }
-  }
   ngOnInit(): void {
     this.activeRoute.params.subscribe({
       next: (data) => {
@@ -41,12 +32,22 @@ export class PostComponent implements OnInit {
 
         this.apiService.getPost(id).subscribe((post) => {
           this.post = post;
+          this.owner = this.post._ownerId;
         });
+        console.log(this.owner);
       },
       error: (err) => {
         console.error("Error: ", err);
       },
     });
+  }
+
+  get isOwner(): boolean {
+    if (this.owner == this.loggedUser) {
+      return true;
+    } else {
+      return false;
+    }
   }
   onDelete(): void {
     this.activeRoute.params.subscribe({
