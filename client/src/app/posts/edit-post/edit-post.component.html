@@ -9,8 +9,18 @@
       [(ngModel)]="post.title"
       required
     /><br /><br />
-    <h4>Published by: {{ post.author }}</h4>
-    <br /><br />
+
+    <label for="author">Published by:</label>
+    <textarea
+      id="text"
+      id="author"
+      name="author"
+      [(ngModel)]="post.author"
+      ngModel
+      required
+    ></textarea
+    ><br /><br />
+
     <label for="text">Review:</label>
     <textarea
       id="text"
