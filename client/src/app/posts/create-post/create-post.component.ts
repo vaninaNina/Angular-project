@@ -21,9 +21,13 @@ export class CreatePostComponent {
       return;
     }
     const author = this.userService.user?.username ?? "";
+    const ownerId = this.userService.user?._id ?? "";
+
     const { title, text, imageUrl } = form.value;
-    this.apiService.createPost(title, text, imageUrl, author).subscribe(() => {
-      this.router.navigate(["/posts"]);
-    });
+    this.apiService
+      .createPost(title, text, imageUrl, author, ownerId)
+      .subscribe(() => {
+        this.router.navigate(["/posts"]);
+      });
   }
 }
