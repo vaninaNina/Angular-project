@@ -16,6 +16,14 @@ Posts Blog - this part of the application provides our users with the opportunit
 
 My Profile - this is the user’s personal area in the web application which they can access after successful login. There they can find personal details and see/access the posts which they have created.
 
+# Users and Guests:
+
+Non-registered users have limited access to the site’s features. Full access is granted once they have a registration. They can register with username, email and password.
+Users can sign up with their email and password and gain full access to all features.
+
+> For testing purposes, you can use the following user details for login:
+> email: peter@abv.bg, password: 123456
+
 # Installation and Running
 
 Navigate to the server directory:
@@ -39,11 +47,3 @@ Run the client part by:
 `ng serve`
 
 Navigate to `http://localhost:4200/`.
-
-# Users and Guests:
-
-Non-registered users have limited access to the site’s features. Full access is granted once they have a registration. They can register with username, email and password.
-Users can sign up with their email and password and gain full access to all features.
-
-> For testing purposes, you can use the following user details for login:
-> email: peter@abv.bg, password: 123456
