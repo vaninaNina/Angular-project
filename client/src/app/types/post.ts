@@ -6,6 +6,5 @@ export interface Post {
   imageUrl: string;
   author: UserForAuth;
   comments: string[];
-  likes: string;
   _ownerId: string;
 }
