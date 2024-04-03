@@ -47,15 +47,17 @@ export class CommentsComponent implements OnInit {
         reviewId: this.postId,
       };
 
-      this.commentService.addCommentToReview(this.postId, newComment).subscribe(
-        (addedComment: CommentInterface) => {
-          this.postComments.push(addedComment);
-          this.comment = "";
-        },
-        (error) => {
-          console.error("Error adding comment:", error);
-        }
-      );
+      this.commentService
+        .addCommentToReview(this.postId, newComment)
+        .subscribe({
+          next: (addedComment: CommentInterface) => {
+            this.postComments.push(addedComment);
+            this.comment = "";
+          },
+          error: (err) => {
+            console.error("Error adding comment:", err);
+          },
+        });
     }
   }
 }
