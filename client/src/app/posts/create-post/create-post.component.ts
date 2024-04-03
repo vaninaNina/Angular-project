@@ -21,9 +21,9 @@ export class CreatePostComponent {
       return;
     }
     const author = this.userService.user?.username ?? "";
-    const ownerId = this.userService.user?._id ?? "";
+    // const ownerId = this.userService.user?._id ?? "";
 
-    const { title, text, imageUrl } = form.value;
+    const { title, text, imageUrl, ownerId } = form.value;
     this.apiService
       .createPost(title, text, imageUrl, author, ownerId)
       .subscribe(() => {
