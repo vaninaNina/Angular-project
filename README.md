@@ -19,16 +19,25 @@ My Profile - this is the user’s personal area in the web application which the
 Installation and Running
 
 Navigate to the server directory:
+
 `cd server`
-Start the server
+
+Start the server:
+
 `node server.js`
 
-Navigate to the project directory by using the terminal
+Navigate to the project directory by using the terminal:
+
 `cd client`
-Install all dependencies needed by running the command below
+
+Install all dependencies needed by running the command below:
+
 `npm install`
-Run the client part by
+
+Run the client part by:
+
 `ng serve`
+
 Navigate to `http://localhost:4200/`.
 
 Users and Guests:
