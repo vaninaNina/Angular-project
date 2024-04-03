@@ -33,7 +33,7 @@ export class UserService implements OnDestroy {
         tap((user) => {
           this.user$$.next(user);
           localStorage.setItem("accessToken", user.accessToken);
-          console.log(JSON.stringify(user));
+          // console.log(JSON.stringify(user));
         })
       );
   }

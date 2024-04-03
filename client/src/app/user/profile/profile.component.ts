@@ -26,7 +26,7 @@ export class ProfileComponent implements OnInit {
       this.filteredPosts = posts.filter(
         (post) => post._ownerId === this.userService.user?._id
       );
-      console.log("Filtered Posts:", this.filteredPosts);
+      // console.log("Filtered Posts:", this.filteredPosts);
     });
   }
 }
